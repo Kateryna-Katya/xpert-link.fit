@@ -13,243 +13,194 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
 ?>
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $domainTitle ?> — Экспертный консалтинг и стратегии роста
-    </title>
-<link rel="icon"
-    href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23635BFF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230A2540;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16H9L12 6L18 26L21 16H28' stroke='url(%23grad)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='28' cy='16' r='3' fill='%23635BFF' /%3E%3C/svg%3E"
-    type="image/svg+xml">
+    <title><?= $domainTitle ?> — IT-школа нового поколения</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><path d=%22M30 30L70 70M70 30L30 70%22 stroke=%22white%22 stroke-width=%2212%22 stroke-linecap=%22round%22/></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@500;800&display=swap"
-        rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header class="header">
         <div class="container header__container">
             <a href="./#hero" class="logo">
                 <span class="logo__icon"></span>
-                <span class="logo__text">
-                    <?= $domainTitle ?>
-                </span>
+                <span class="logo__text"><?= $domainTitle ?></span>
             </a>
-
+            
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="./#hero" class="nav__link">Главная</a></li>
-                    <li><a href="./#strategies" class="nav__link">Стратегии</a></li>
-                    <li><a href="./#expertise" class="nav__link">Экспертиза</a></li>
-                    <li><a href="./#insights" class="nav__link">Инсайты</a></li>
+                    <li><a href="./#courses" class="nav__link">Курсы</a></li>
+                    <li><a href="./#benefits" class="nav__link">Преимущества</a></li>
+                    <li><a href="./#method" class="nav__link">Методология</a></li>
                     <li><a href="./#reviews" class="nav__link">Отзывы</a></li>
                 </ul>
             </nav>
 
-            <a href="./#contact" class="btn btn--outline header__cta">Связаться</a>
+            <a href="./#contact" class="btn btn--header">
+                <span>Связаться</span>
+                <i data-lucide="arrow-up-right"></i>
+            </a>
 
             <button class="burger" aria-label="Menu">
                 <span></span>
             </button>
         </div>
     </header>
-
-<main>
+    <main class="legal-page">
     <section class="pages">
         <div class="container">
-            <h1>Политика конфиденциальности</h1>
+            <span class="section-tag reveal-item">Privacy Policy</span>
+            <h1 class="reveal-item">Политика конфиденциальности</h1>
 
-            <p>
-                Политика конфиденциальности распространяется на персональные данные,
-                предоставляемые клиентами <strong><?= $domainTitle ?></strong>, как для оказания различного рода
-                услуг по консалтингу, так и для других взаимодействий в электронном
-                формате, а также при участии клиентов в экспертных программах и акциях, оказывая
-                техническую поддержку и информационное сопровождение.
-            </p>
+            <div class="legal-content">
+                <div class="policy-hero-card reveal-item">
+                    <p>
+                        Политика конфиденциальности распространяется на персональные данные,
+                        предоставляемые студентами <strong><?= $domainTitle ?></strong>, как для оказания образовательных услуг, так и для других взаимодействий в рамках нашей инновационной цифровой инфраструктуры.
+                    </p>
+                </div>
 
-            <p>
-                <strong><?= $domainTitle ?></strong> оставляет за собой право вносить изменения и дополнения
-                в действующие положения Политики конфиденциальности. Эти изменения будут иметь приоритет над текущими
-                положениями. Обратите внимание, что наши услуги могут содержать ссылки на ресурсы третьих лиц, которые имеют свои
-                собственные положения. В таких случаях <strong><?= $domainTitle ?></strong> не несет ответственности за содержание и соблюдение
-                конфиденциальности любой сторонней компании. Предоставляя свои данные, вы даете полное согласие
-                на их обработку способами, предусмотренными настоящей Политикой.
-            </p>
+                <div class="policy-notice reveal-item">
+                    <p>
+                        <strong><?= $domainTitle ?></strong> оставляет за собой право вносить изменения в положения Политики согласно законодательству ЕС. Обратите внимание, что наши ресурсы могут содержать ссылки на сторонние сервисы. Предоставляя свои данные, вы даете полное согласие на их обработку способами, предусмотренными настоящей Политикой.
+                    </p>
+                </div>
 
-            <h2>Порядок сбора, хранения и уничтожения персональных данных</h2>
-            <p>
-                <strong><?= $domainTitle ?></strong> собирает персональные данные только с согласия
-                пользователя и исключительно для предоставления качественных услуг: доступа к платформе,
-                участия в стратегических сессиях, получения аналитических отчетов и внедрения инноваций. Для
-                предотвращения утечки данных мы используем полный комплекс мер информационной безопасности, включая современные протоколы шифрования.
-            </p>
+                <h2 class="reveal-item">Порядок сбора, хранения и уничтожения</h2>
+                <div class="storage-info reveal-item">
+                    <div class="storage-item">
+                        <i data-lucide="calendar-clock"></i>
+                        <span>Срок хранения до <strong>75 лет</strong></span>
+                    </div>
+                    <div class="storage-item">
+                        <i data-lucide="check-circle-2"></i>
+                        <span>Только с вашего согласия</span>
+                    </div>
+                </div>
+                <p class="reveal-item">
+                    Для предотвращения утечки данных мы используем полный комплекс мер информационной безопасности. Уничтожение или блокирование данных осуществляется по запросу клиента или при достижении целей сбора (завершение обучения).
+                </p>
 
-            <p>
-                Максимальный срок хранения персональных данных составляет 75
-                лет с даты получения информации. В остальных случаях компания хранит данные клиента до
-                завершения своей деятельности или до момента официального отзыва согласия пользователем.
-            </p>
+                <div class="data-collection-grid">
+                    <div class="data-box reveal-item">
+                        <h3><i data-lucide="terminal"></i> Техническая информация</h3>
+                        <ul>
+                            <li>IP-адрес и время доступа</li>
+                            <li>Источники перехода на <strong><?= $fullDomain ?></strong></li>
+                            <li>Данные браузера и поведение на платформе</li>
+                        </ul>
+                    </div>
+                    <div class="data-box reveal-item">
+                        <h3><i data-lucide="fingerprint"></i> Персонализация</h3>
+                        <ul>
+                            <li>Имя пользователя</li>
+                            <li>E-mail и номер телефона</li>
+                            <li>Данные об учебных контрактах и курсах</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <p>
-                Уничтожение, обезличивание или блокирование данных осуществляется для исключения возможности
-                их дальнейшей обработки, если цель сбора была достигнута или по запросу клиента.
-            </p>
+                <h2 class="reveal-item">Цели обработки персональных данных</h2>
+                <ul class="legal-list reveal-item">
+                    <li>Предоставление доступа к учебной платформе года.</li>
+                    <li>Учет пожеланий при разработке новых программ обучения.</li>
+                    <li>Информирование об обновлениях курсов и новых технологиях.</li>
+                    <li>Обеспечение оперативной экспертной поддержки.</li>
+                </ul>
 
-            <p>
-                <strong><?= $domainTitle ?></strong> собирает данные в следующих категориях:
-            </p>
+                <h2 class="reveal-item">Использование Cookies</h2>
+                <p class="reveal-item">
+                    Файлы cookie позволяют нам анализировать трафик и сохранять ваши предпочтения (например, настройки региона Франция), чтобы сделать использование <strong><?= $fullDomain ?></strong> удобнее. Вы можете управлять ими в настройках своего браузера.
+                </p>
 
-            <h2>Техническая информация:</h2>
-            <ul>
-                <li>время доступа и IP-адрес;</li>
-                <li>источники обращения на интернет-ресурс <strong><?= $fullDomain ?></strong>;</li>
-                <li>Интернет-страницы, посещаемые пользователем;</li>
-                <li>просмотры информационных и рекламных блоков;</li>
-                <li>иная техническая информация, предоставляемая браузером;</li>
-                <li>номер телефона (в случае звонка по контактам, указанным на сайте).</li>
-            </ul>
-
-            <p>
-                При регистрации или заполнении форм обратной связи мы собираем информацию, 
-                необходимую для аутентификации и персонализации услуг:
-            </p>
-            <ul>
-                <li>имя пользователя;</li>
-                <li>e-mail и номер телефона для оперативной связи;</li>
-            </ul>
-
-            <h2>Информация о действиях пользователя:</h2>
-            <ul>
-                <li>информация о соглашениях и контрактах между клиентом и <strong><?= $domainTitle ?></strong>;</li>
-                <li>данные о запросах, отправленных через формы на сайте;</li>
-                <li>сведения о полученных консультациях и пройденных программах;</li>
-                <li>произведенные платежи и иная финансовая информация, предусмотренная действующим законодательством ЕС.</li>
-            </ul>
-
-            <h2>Цели обработки персональных данных клиентов:</h2>
-            <ul>
-                <li>предоставление консалтинговых услуг и доступа к аналитической платформе;</li>
-                <li>учет пожеланий при разработке новых технологических решений;</li>
-                <li>информирование об акциях, скидках и новых материалах в блоге через e-mail;</li>
-                <li>обеспечение качественной экспертной поддержки.</li>
-            </ul>
-
-            <h2>
-                <strong><?= $domainTitle ?></strong> не предоставляет данные клиентов третьим лицам, за исключением:
-            </h2>
-            <ul>
-                <li>получения прямого согласия пользователя на такую передачу;</li>
-                <li>по требованию компетентных органов Германии в соответствии с законодательством;</li>
-                <li>случаев стратегического слияния или поглощения компании.</li>
-            </ul>
-
-            <h2>Использование файлов cookie и точечных маркеров</h2>
-            <p>
-                Файлы cookie позволяют нам анализировать трафик и сохранять ваши предпочтения (например, настройки региона Германия), 
-                чтобы сделать использование <strong><?= $fullDomain ?></strong> максимально эффективным. Точечные маркеры 
-                используются для статистического анализа посещений. Вы можете в любое время отключить Cookies в настройках своего браузера.
-            </p>
-
-            <h2>Права пользователя в отношении персональных данных</h2>
-            <p>
-                Если вы хотите отредактировать свои данные или полностью прекратить их обработку в соответствии с нормами GDPR, 
-                пожалуйста, свяжитесь с командой <strong><?= $domainTitle ?></strong> по адресу: 
-                <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>.
-            </p>
+                <div class="rights-block reveal-item">
+                    <h2>Ваши права</h2>
+                    <p>
+                        Если вы хотите отредактировать свои данные, получить выписку или прекратить их обработку, свяжитесь с командой <strong><?= $domainTitle ?></strong>:
+                    </p>
+                    <a href="mailto:hello@<?= $fullDomain ?>" class="contact-btn">hello@<?= $fullDomain ?></a>
+                </div>
+            </div>
         </div>
     </section>
 </main>
 
-
-
-
-     <footer class="footer">
+    <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__col">
-                <a href="./#hero" class="logo footer__logo">
-                    <span class="logo__icon"></span>
-                    <span class="logo__text">
-                        <?= $domainTitle ?>
-                    </span>
+                <a href="./#hero" class="logo logo--footer">
+                    <span class="logo__text"><?= $domainTitle ?></span>
                 </a>
-                <p class="footer__description">Технологии нового поколения для вашего бизнеса. Переосмыслите подход к
-                    развитию вместе с экспертной поддержкой.</p>
+                <p class="footer__tagline">Технологии нового поколения для вашего карьерного взлета.</p>
             </div>
 
             <div class="footer__col">
                 <h4 class="footer__title">Навигация</h4>
                 <ul class="footer__links">
                     <li><a href="./#hero">Главная</a></li>
-                    <li><a href="./#strategies">Стратегии</a></li>
-                    <li><a href="./#expertise">Экспертиза</a></li>
-                    <li><a href="./#insights">Инсайты</a></li>
+                    <li><a href="./#courses">Курсы</a></li>
+                    <li><a href="./#benefits">Преимущества</a></li>
+                    <li><a href="./#reviews">Отзывы</a></li>
                 </ul>
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__title">Документы</h4>
+                <h4 class="footer__title">Юридическая информация</h4>
                 <ul class="footer__links">
-                    <li><a href="./privacy.php">Privacy Policy</a></li>
-                    <li><a href="./cookies.php">Cookie Policy</a></li>
-                    <li><a href="./terms.php">Terms of Service</a></li>
-                    <li><a href="./return.php">Return Policy</a></li>
-                    <li><a href="./disclaimer.php">Disclaimer</a></li>
-                    <li><a href="./contact.php">Contact Us</a></li>
-                    <li><a href="./personal-data-policy.php">Data Policy</a></li>
+                    <li><a href="./privacy.php">Политика конфиденциальности</a></li>
+                    <li><a href="./cookies.php">Cookie файлы</a></li>
+                    <li><a href="./terms.php">Условия использования</a></li>
+                    <li><a href="./personal-data-policy.php">Персональные данные</a></li>
                 </ul>
             </div>
 
             <div class="footer__col">
                 <h4 class="footer__title">Контакты</h4>
-                <ul class="footer__contact">
-                    <li><i data-lucide="phone" class="icon-sm"></i> +390697639457</li>
-                    <li><i data-lucide="mail" class="icon-sm"></i> hello@
-                        <?= $fullDomain ?>
+                <ul class="footer__contact-list">
+                    <li>
+                        <i data-lucide="phone"></i>
+                        <a href="tel:+33189480054">+33 1 89 48 00 54</a>
                     </li>
-                    <li><i data-lucide="map-pin" class="icon-sm"></i> Kurfürstendamm 21, 10719 Berlin, Germany</li>
+                    <li>
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>
+                    </li>
+                    <li>
+                        <i data-lucide="map-pin"></i>
+                        <span>15 Rue de la Paix, 75002 Paris, France</span>
+                    </li>
                 </ul>
             </div>
         </div>
+        
         <div class="container footer__bottom">
-            <p>&copy; 2026
-                <?= $domainTitle ?>. Все права защищены. Предложение активно только в странах ЕС.
-            </p>
+            <p>&copy; 2026 <?= $domainTitle ?>. Все права защищены.</p>
+            <div class="footer__legal-inline">
+                <a href="./return.php">Возврат</a>
+                <a href="./disclaimer.php">Отказ от ответственности</a>
+                <a href="./contact.php">Контакты</a>
+            </div>
         </div>
     </footer>
-<div class="mobile-menu">
-    <button class="mobile-menu__close"><i data-lucide="x"></i></button>
-    <ul class="mobile-menu__list">
-        <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
-        <li><a href="./#strategies" class="mobile-menu__link">Стратегии</a></li>
-        <li><a href="./#expertise" class="mobile-menu__link">Экспертиза</a></li>
-        <li><a href="./#insights" class="mobile-menu__link">Инсайты</a></li>
-        <li><a href="./#reviews" class="mobile-menu__link">Отзывы</a></li>
-        <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
-    </ul>
-</div>
-
-<div id="cookie-popup" class="cookie-popup">
-    <div class="cookie-popup__content">
-        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
-                политике</a>.</p>
-        <button id="cookie-accept" class="btn btn--accent-sm">Принять</button>
+    <div id="cookie-popup" class="cookie-popup">
+        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie политике</a>.</p>
+        <button id="cookie-accept" class="btn btn--header">Принять</button>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script type="module" src="script.js"></script>    
- 
-    
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
